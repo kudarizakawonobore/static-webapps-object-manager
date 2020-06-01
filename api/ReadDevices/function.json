@@ -14,6 +14,16 @@
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "name": "deviceEntity",
+      "type": "table",
+      "tableName": "devices",
+      "partitionKey": "devices",
+      "take": 50,
+      "connection": "DeviceStorageConnection",
+      "direction": "in"
     }
-  ]
+  ],
+  "disabled": false
 }

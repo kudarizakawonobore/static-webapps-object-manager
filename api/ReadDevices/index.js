@@ -1,16 +1,22 @@
-module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+const storage = require('azure-storage');
+let tableSvc = storage.createTableService(process.env.STORAGE_ACCOUNT, process.env.ACCOUNT_KEY);
 
-    if (req.query.name || (req.body && req.body.name)) {
+module.exports = async function (context, req) {
+
+    if (req.method == "GET") {
+        // context.log("---------------")
+        // let query = new storage.TableQuery()
+        //     .where('PartitionKey eq ?', 'devices');
+        // tableSvc.queryEntities(process.env.TABLE, query, null, (error, result, response) => {
+        //     context.log(response.body.value)
+        //     context.res.json(response.body.value);
+        //     context.res.body = "hoge"
+        //     context.done();
+        // });
         context.res = {
-            // status: 200, /* Defaults to 200 */
-            body: "Hello " + (req.query.name || req.body.name)
-        };
-    }
-    else {
-        context.res = {
-            status: 400,
-            body: "Please pass a name on the query string or in the request body"
-        };
+            status: 200,
+            body: context.bindings.deviceEntity
+        }
     }
 };
+

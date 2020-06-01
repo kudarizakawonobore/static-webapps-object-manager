@@ -1,17 +1,10 @@
 const storage = require('azure-storage');
-
 var tableSvc = storage.createTableService(process.env.STORAGE_ACCOUNT, process.env.ACCOUNT_KEY);
 
 module.exports = async function (context, req) {
     if (req.body) {
         const payload = createPayload(req.body);
         tableSvc.insertOrReplaceEntity (process.env.TABLE, payload, function (error, result, response) {
-            if (!error) {
-                context.res = {
-                    status: 500,
-                    body: error
-                }
-            }
             context.res = response
         });
     }
