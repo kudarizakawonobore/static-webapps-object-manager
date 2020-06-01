@@ -1,5 +1,4 @@
 const storage = require('azure-storage');
-let tableSvc = storage.createTableService(process.env.STORAGE_ACCOUNT, process.env.ACCOUNT_KEY);
 
 module.exports = async function (context, req) {
 
