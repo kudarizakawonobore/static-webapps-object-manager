@@ -8,7 +8,7 @@
                 ],
                 "route": "/api/{test}"
             },
-            "backendUri": "https://static-webapps-module-manager.azurewebsites.net/api/{test}?code={FunctionCode}"
+            "backendUri": "https://static-webapps-module-manager.azurewebsites.net/api/{test}?code=%FunctionCode%"
         }
     }
 }
