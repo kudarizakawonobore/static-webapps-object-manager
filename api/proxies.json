@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "proxy1": {
+            "matchCondition": {
+                "methods": [
+                    "GET"
+                ],
+                "route": "/api/ReadDevices"
+            },
+            "backendUri": "https://static-webapps-module-manager.azurewebsites.net/api/ReadDevices"
+        },
+        "proxy2": {
+            "matchCondition": {
+                "methods": [
+                    "POST"
+                ],
+                "route": "/api/CreateDevice"
+            },
+            "backendUri": "https://static-webapps-module-manager.azurewebsites.net/api/CreateDevice"
+        }
+    }
+}
