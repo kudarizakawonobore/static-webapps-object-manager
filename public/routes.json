@@ -6,7 +6,7 @@
         },
         {
             "route": "/devices",
-            "serve": "index.html",
+            "serve": "/.auth/login/aad",
             "allowedRoles": [
                 "reader"
             ]
