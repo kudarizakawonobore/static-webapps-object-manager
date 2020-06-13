@@ -8,7 +8,9 @@
     style="max-width: 20rem;"
     class="mb-2"
   >
-    <b-card-text>Some quick example text to build on the card title and make up the bulk of the card's content.</b-card-text>
+    <b-card-text>name: {{target.name}}</b-card-text>
+    <b-card-text>owner: {{target.owner}}</b-card-text>
+    <b-card-text></b-card-text>
 
     <b-button href="#" variant="primary">Go somewhere</b-button>
   </b-card>

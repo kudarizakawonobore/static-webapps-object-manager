@@ -2,7 +2,7 @@
   <div class="devices">
     <h1>This is Devices Page</h1>
 
-    <div v-for="device in deviceList" :key="device.name">
+    <div class="devicelist" v-for="device in deviceList" :key="device.name">
       <Device v-bind:target="device"></Device>
     </div>
   </div>
@@ -31,3 +31,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+.devicelist {
+  float: left;
+}
+</style>
