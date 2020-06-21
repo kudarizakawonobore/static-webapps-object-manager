@@ -1,30 +1,37 @@
-const storage = require('azure-storage');
-var tableSvc = storage.createTableService(process.env.STORAGE_ACCOUNT, process.env.ACCOUNT_KEY);
-
+const atob = require('atob');
 module.exports = async function (context, req) {
     if (req.body) {
-        const payload = createPayload(req.body);
-        tableSvc.insertOrReplaceEntity (process.env.TABLE, payload, function (error, result, response) {
-            context.res = response
-        });
+        context.bindings.blobBinding = toBin(req.body.image);
+        context.bindings.tableBinding = [];
+        tablePush(context, req.body);
+        context.done();
     }
     else {
         context.res = {
             status: 400,
-            body: "Please pass a name on the query string or in the request body"
+            body: "Bad Request please pass properties, name, owner, ownermail, price, note"
         };
     }
 };
 
-const createPayload = (body) => {
-    return {
-        PartitionKey: { '_': 'devices' },
-        RowKey: { '_': body.name },
-        name: { '_': body.name },
-        owner: { '_': body.owner },
-        ownermail: { '_': body.ownermail },
-        price: { '_': +body.price, '$': 'Edm.Double' },
-        note: { '_': body.note },
-    }
+const tablePush = (context, body) => {
+    context.bindings.tableBinding.push({
+            PartitionKey: "devices",
+            RowKey: body.name,
+            name: body.name,
+            owner: body.owner,
+            ownermail: body.ownermail,
+            price: body.price,
+            note: body.note,
+            path: body.filename
+        })
+}
 
+const toBin = (base64) => {
+    var bin = atob(base64.replace(/^.*,/, ''));
+    var buffer = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) {
+        buffer[i] = bin.charCodeAt(i);
+    }
+    return buffer;
 }

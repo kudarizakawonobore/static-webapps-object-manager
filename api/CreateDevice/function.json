@@ -14,6 +14,20 @@
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "tableName": "devices",
+      "connection": "DeviceStorageConnection",
+      "name": "tableBinding",
+      "type": "table",
+      "direction": "out"
+    },
+    {
+      "name": "blobBinding",
+      "type": "blob",
+      "path": "images/{filename}",
+      "connection": "DeviceStorageConnection",
+      "direction": "out"
     }
   ]
 }
