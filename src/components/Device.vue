@@ -1,8 +1,8 @@
 <template>
   <b-card
     v-bind:title="target.name"
-    img-src="https://picsum.photos/600/300/?image=25"
-    img-alt="Image"
+    v-bind:img-src="`https://storageaccountmodul8e7c.blob.core.windows.net/images/${target.path}`"
+    v-bind:img-alt="target.path"
     img-top
     tag="article"
     style="max-width: 20rem;"

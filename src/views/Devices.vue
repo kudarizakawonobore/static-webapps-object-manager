@@ -5,6 +5,7 @@
     <div class="devicelist" v-for="device in deviceList" :key="device.name">
       <Device v-bind:target="device"></Device>
     </div>
+    <b-button href="#" variant="primary">Create</b-button>
   </div>
 </template>
 

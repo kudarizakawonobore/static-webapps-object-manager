@@ -23,6 +23,10 @@ export default new Vuex.Store({
           commit('setDevices', response.data)
         }
       )
+    },
+    createDevice({commit}, payload) {
+      axios.post(`${apiUrl}api/CreateDevice`, payload).then(
+      )
     }
   },
   modules: {
