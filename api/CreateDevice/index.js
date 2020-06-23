@@ -23,7 +23,7 @@ const tablePush = (context, body) => {
             ownermail: body.ownermail,
             price: body.price,
             note: body.note,
-            path: body.filename
+            path: `${body.filename}.${body.extention}`
         })
 }
 

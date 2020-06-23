@@ -4,11 +4,20 @@
         "proxy1": {
             "matchCondition": {
                 "methods": [
-                    "GET", "POST"
+                    "GET"
                 ],
-                "route": "/api/{test}"
+                "route": "/api/ReadDevices"
             },
-            "backendUri": "https://localhost/api/{test}?code=%FunctionCode%"
+            "backendUri": "https://localhost/api/ReadDevices?code=%ReadFunctionCode%"
+        },
+        "proxy2": {
+            "matchCondition": {
+                "methods": [
+                    "POST"
+                ],
+                "route": "/api/CreateDevice"
+            },
+            "backendUri": "https://localhost/api/CreateDevice?code=%CreateFunctionCode%"
         }
     }
 }

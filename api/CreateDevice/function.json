@@ -25,7 +25,7 @@
     {
       "name": "blobBinding",
       "type": "blob",
-      "path": "images/{filename}",
+      "path": "images/{filename}.{extention}",
       "connection": "DeviceStorageConnection",
       "direction": "out"
     }
