@@ -17,7 +17,7 @@ export default new Vuex.Store({
   },
   actions: {
     getDevices({commit}) {
-      axios.get(`${apiUrl}api/ReadDevices`).then(
+      axios.get(`${apiUrl}/api/ReadDevices`).then(
         (response) => {
           console.log(response.data)
           commit('setDevices', response.data)
@@ -25,7 +25,7 @@ export default new Vuex.Store({
       )
     },
     createDevice({commit}, payload) {
-      axios.post(`${apiUrl}api/CreateDevice`, payload).then(
+      axios.post(`${apiUrl}/api/CreateDevice`, payload).then(
       )
     }
   },

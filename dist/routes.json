@@ -5,8 +5,8 @@
             "serve": "/.auth/login/aad"
         },
         {
-            "route": "/",
-            "serve": "/login",
+            "route": "/devices",
+            "serve": "/devices",
             "allowedRoles": [
                 "reader"
             ]
