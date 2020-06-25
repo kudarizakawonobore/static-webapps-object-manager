@@ -17,7 +17,7 @@ module.exports = async function (context, req) {
 const tablePush = (context, body) => {
     context.bindings.tableBinding.push({
             PartitionKey: "devices",
-            RowKey: body.name,
+            RowKey: body.filename,
             name: body.name,
             owner: body.owner,
             ownermail: body.ownermail,
