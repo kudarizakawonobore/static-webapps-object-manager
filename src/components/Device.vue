@@ -12,7 +12,9 @@
     <b-card-text>owner: {{target.owner}}</b-card-text>
     <b-card-text></b-card-text>
 
-    <b-button href="#" variant="primary">Go somewhere</b-button>
+    <div class="button-group">
+      <b-button href="#" variant="primary">Edit</b-button>
+    </div>
   </b-card>
 </template>
 
@@ -21,3 +23,5 @@ export default {
     props: ['target']
 }
 </script>
+<style scoped>
+</style>
