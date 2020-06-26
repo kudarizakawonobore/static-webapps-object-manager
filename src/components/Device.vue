@@ -1,7 +1,7 @@
 <template>
   <b-card
     v-bind:title="target.name"
-    v-bind:img-src="`https://storageaccountmodul8e7c.blob.core.windows.net/images/${target.path}`"
+    v-bind:img-src="target.path"
     v-bind:img-alt="target.path"
     img-top
     tag="article"
