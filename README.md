@@ -1,12 +1,18 @@
-# static-webapps-object-manager
+# object manger sample
+A sample project object manager. 
 
 ## Project setup
 ```
 npm install
 ```
 
+create `.env.local` and set `VUE_APP_API_URL` to your local functions url.
+
 ### Compiles and hot-reloads for development
 ```
+cd api
+func host start --cors '*'
+cd ..
 npm run serve
 ```
 
@@ -14,16 +20,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
