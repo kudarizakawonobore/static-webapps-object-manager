@@ -13,7 +13,7 @@
         },
         {
             "route": "/devices/*",
-            "serve": "index.html",
+            "serve": "/index.html",
             "allowedRoles": [
                 "reader"
             ]
