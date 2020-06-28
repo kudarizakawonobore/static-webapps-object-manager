@@ -6,7 +6,6 @@
         },
         {
             "route": "/devices",
-            "serve": "/devices",
             "allowedRoles": [
                 "reader"
             ]
