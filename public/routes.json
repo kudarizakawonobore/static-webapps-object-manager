@@ -38,6 +38,10 @@
         {
             "errorType": "Unauthenticated",
             "serve": "/login.html"
+        },
+        {
+            "errorType": "Unauthorized_MissingRoles",
+            "serve": "/login.html"
         }
     ]
 }
