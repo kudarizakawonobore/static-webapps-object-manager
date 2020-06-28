@@ -14,6 +14,20 @@
             ]
         },
         {
+            "route": "/devices",
+            "serve": "index.html",
+            "allowedRoles": [
+                "reader"
+            ]
+        },
+        {
+            "route": "/devices/*",
+            "serve": "index.html",
+            "allowedRoles": [
+                "reader"
+            ]
+        },
+        {
             "route": "/login",
             "serve": "/login.html"
         },
