@@ -1,23 +1,6 @@
 {
     "routes": [
         {
-            "route": "/",
-            "serve": "/index.html",
-            "allowedRoles": [
-                "reader"
-            ]
-        },
-        {
-            "route": "/index.html",
-            "allowedRoles": [
-                "reader"
-            ]
-        },
-        {
-            "route": "/login",
-            "serve": "/login.html"
-        },
-        {
             "route": "/.auth/login/twitter",
             "statusCode": 404
         },
@@ -32,6 +15,14 @@
         {
             "route": "/.auth/login/github",
             "statusCode": 404
+        },
+        {
+            "route": "/*",
+            "serve": "/index.html",
+            "statusCode": 200,
+            "allowedRoles": [
+                "reader"
+            ]
         }
     ],
     "platformErrorOverrides": [
