@@ -1,14 +1,8 @@
 {
     "routes": [
         {
-            "route": "/",
+            "route": "/devices",
             "serve": "/index.html",
-            "allowedRoles": [
-                "reader"
-            ]
-        },
-        {
-            "route": "/index.html",
             "allowedRoles": [
                 "reader"
             ]
@@ -37,11 +31,11 @@
     "platformErrorOverrides": [
         {
             "errorType": "Unauthenticated",
-            "serve": "/login.html"
+            "serve": "/login"
         },
         {
             "errorType": "Unauthorized_MissingRoles",
-            "serve": "/login.html"
+            "serve": "/login"
         }
     ]
 }
