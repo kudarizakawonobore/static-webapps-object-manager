@@ -1,4 +1,4 @@
-# Require
+# Requirement(local setting)
 * Set environ value `BlobUrl` to your blob container url. 
 * Set connection strings `DeviceStorageConnection` to your storage account's connection string.
 
@@ -16,3 +16,6 @@ Ex.
   }
 }
 ```
+# Requirement(deploy)
+* Set environ value `ReadFunctionCode` to your functions(ReadDevices) key
+* Set environ value `CreateFunctionCode` to your functions(CreateDevices) key
