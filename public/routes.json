@@ -1,20 +1,43 @@
 {
     "routes": [
         {
-            "route": "/#/login",
-            "serve": "/.auth/login/aad"
-        },
-        {
-            "route": "/#/devices",
+            "route": "/",
+            "serve": "/index.html",
             "allowedRoles": [
                 "reader"
             ]
+        },
+        {
+            "route": "/index.html",
+            "allowedRoles": [
+                "reader"
+            ]
+        },
+        {
+            "route": "/login",
+            "serve": "/login.html"
+        },
+        {
+            "route": "/.auth/login/twitter",
+            "statusCode": 404
+        },
+        {
+            "route": "/.auth/login/google",
+            "statusCode": 404
+        },
+        {
+            "route": "/.auth/login/facebook",
+            "statusCode": 404
+        },
+        {
+            "route": "/.auth/login/github",
+            "statusCode": 404
         }
     ],
     "platformErrorOverrides": [
         {
             "errorType": "Unauthenticated",
-            "serve": "/#/login"
+            "serve": "/login.html"
         }
     ]
 }
