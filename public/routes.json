@@ -1,11 +1,11 @@
 {
     "routes": [
         {
-            "route": "/login",
+            "route": "/#/login",
             "serve": "/.auth/login/aad"
         },
         {
-            "route": "/devices",
+            "route": "/#/devices",
             "allowedRoles": [
                 "reader"
             ]
@@ -14,7 +14,7 @@
     "platformErrorOverrides": [
         {
             "errorType": "Unauthenticated",
-            "serve": "/login"
+            "serve": "/#/login"
         }
     ]
 }
