@@ -5,6 +5,10 @@
             "serve": "/index.html"
         },
         {
+            "route": "/login",
+            "serve": "/.auth/login/aad"
+        },
+        {
             "route": "/devices",
             "serve": "/index.html",
             "allowedRoles": [
