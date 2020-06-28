@@ -1,14 +1,20 @@
 {
     "routes": [
         {
-            "route": "/#/devices",
+            "route": "/",
             "serve": "/index.html",
             "allowedRoles": [
                 "reader"
             ]
         },
         {
-            "route": "/#/login",
+            "route": "/index.html",
+            "allowedRoles": [
+                "reader"
+            ]
+        },
+        {
+            "route": "/login",
             "serve": "/login.html"
         },
         {
@@ -26,16 +32,21 @@
         {
             "route": "/.auth/login/github",
             "statusCode": 404
+        },
+        {
+            "route": "/*",
+            "serve": "/index.html",
+            "statusCode": 200
         }
     ],
     "platformErrorOverrides": [
         {
             "errorType": "Unauthenticated",
-            "serve": "/#/login"
+            "serve": "/login.html"
         },
         {
             "errorType": "Unauthorized_MissingRoles",
-            "serve": "/#/login"
+            "serve": "/login.html"
         }
     ]
 }
