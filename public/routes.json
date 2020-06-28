@@ -37,7 +37,11 @@
     "platformErrorOverrides": [
         {
             "errorType": "Unauthenticated",
-            "serve": "/.auth/login/aad"
+            "serve": "/login.html"
+        },
+        {
+            "errorType": "Unauthorized_MissingRoles",
+            "serve": "/login.html"
         }
     ]
 }
