@@ -37,7 +37,7 @@
     "platformErrorOverrides": [
         {
             "errorType": "Unauthenticated",
-            "serve": "/login.html"
+            "serve": "/.auth/login/aad"
         }
     ]
 }
