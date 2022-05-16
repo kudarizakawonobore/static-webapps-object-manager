@@ -8,7 +8,7 @@
   "author": "",
   "dependencies": {
     "atob": "^2.1.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "azure-storage": "^2.10.3"
   }
 }
